@@ -157,12 +157,15 @@ public class ProgramaParaUsar4Operacoes {
 			
 		default:
 			System.out.println("Operação inválida!!! ");
-			
+			System.out.println("O caractere '" + OP + "' não é uma operação aritimética válida! ");
+				
 		}
 		
+		System.out.println("====================================================================");	
 		System.out.println("Insira qualquer valor para continuar ou -999 para finalizar o programa.");
 		fim = sc.nextInt();
-		
+		System.out.println("====================================================================");
+			
 		} while(fim != -999);
 		System.out.println("Programa finalzado!");
 	
