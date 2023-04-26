@@ -1,52 +1,45 @@
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class ProgramacaoOrientadaObjeto01 {
 
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("##.00");
 		
 		Triangulo x = new Triangulo();
 		Triangulo y = new Triangulo();
 		
-		System.out.println("Insira os lados do trinângulo 1------------------------------------");
-		System.out.println("Insira o 1° lado do triângulo: ");
+		System.out.println("Insira os lados do trinÃ¢ngulo 1------------------------------------");
 		x.a = sc.nextInt();
-		
-		System.out.println("Insira o 2° lado do triângulo: ");
-		x.b = sc.nextInt();
-		
-		System.out.println("Insira o 3° lado do triângulo: ");
+		x.b = sc.nextInt();		
 		x.c = sc.nextInt();
 		
-		System.out.println("Insira os lados do trinângulo 2------------------------------------");
-		System.out.println("Insira o 1° lado do 2° triângulo: ");
+		System.out.println("Insira os lados do trinÃ¢ngulo 2------------------------------------");
 		y.a = sc.nextInt();
-		
-		System.out.println("Insira o 2° lado do 2° triângulo: ");
 		y.b = sc.nextInt();
-		
-		System.out.println("Insira o 3° lado do 2° triângulo: ");
 		y.c = sc.nextInt();
 		
-		int P1 =  + lad2 + lad3/2;
+		int P1 = x.a + x.b + x.c /2;
+		int P2 = y.a + y.b + y.c /2;
 		
-		double valor = P1 * (P1 - lad1) * (P1 - lad2) * (P1 - lad3);
-		double valor2 = P2 * (P2 - lad11) * (P2 - lad22) * (P2 - lad33);
+		double valor = P1 * (P1 - x.a) * (P1 - x.b) * (P1 - x.c);
+		double valor2 = P2 * (P2 - y.a) * (P2 - y.b) * (P2 - y.c);
 		
 		double raiz = Math.sqrt(valor);
 		double raiz2 = Math.sqrt(valor2);
 		
-		System.out.println("A área do primeiro triângulo é: " + raiz);
-		System.out.println("A área do primeiro triângulo é: " + raiz2);
+		System.out.println("A Ã¡rea do primeiro triÃ¢ngulo Ã©: " + df.format(raiz));
+		System.out.println("A Ã¡rea do primeiro triÃ¢ngulo Ã©: " + df.format(raiz2));
 		
 		if(raiz > raiz2) {
 			
-			System.out.println("A área do primeiro triangulo é maior!");
+			System.out.println("A Ã¡rea do primeiro triangulo Ã© maior!");
 			
 		}else {
 			
-			System.out.println("A área do segundo triangulo é maior!");
+			System.out.println("A Ã¡rea do segundo triangulo Ã© maior!");
 		}
 		
 		
